@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "249690117287",
+    "firebase_url": "https://maverick2245-9ced6.firebaseio.com",
+    "project_id": "maverick2245-9ced6",
+    "storage_bucket": "maverick2245-9ced6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:249690117287:android:ad11c9fa235be90286b782",
+        "android_client_info": {
+          "package_name": "com.example.maverick2245"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "249690117287-1o7q2nmiiq6aiqq42tn604n5r977np0i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAEbkvHP-YhdG5lkoJolKo1ILv-2BLy6Sw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "249690117287-1o7q2nmiiq6aiqq42tn604n5r977np0i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
