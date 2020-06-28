@@ -39,6 +39,15 @@ class _SignInPageState extends State<SignInPage> {
   final password1 = TextEditingController();
   final password2 = TextEditingController();
 
+  void dispose() {
+    fullName.dispose();
+    email.dispose();
+    ph_no.dispose();
+    password1.dispose();
+    password2.dispose();
+    super.dispose();
+  }
+
   // Build method runs again and again as the state changes to rebuild the UI
   @override
   Widget build(BuildContext context) {
@@ -186,12 +195,12 @@ class _SignInPageState extends State<SignInPage> {
                             prefixIcon: Icon(Icons.lock),
                             labelText: 'Password',
                             suffixIcon: new IconButton(
-                                    icon: Icon(Icons.remove_red_eye),
-                                    onPressed: () {
-                                      setState(() {
-                                        _passwordVisible1 = !(_passwordVisible1);
-                                      });
-                                    }),
+                                icon: Icon(Icons.remove_red_eye),
+                                onPressed: () {
+                                  setState(() {
+                                    _passwordVisible1 = !(_passwordVisible1);
+                                  });
+                                }),
                           ),
                         ),
                       ),
@@ -218,12 +227,12 @@ class _SignInPageState extends State<SignInPage> {
                             prefixIcon: Icon(Icons.lock),
                             labelText: 'Confirm Password',
                             suffixIcon: new IconButton(
-                                    icon: Icon(Icons.remove_red_eye),
-                                    onPressed: () {
-                                      setState(() {
-                                        _passwordVisible2 = !(_passwordVisible2);
-                                      });
-                                    }),
+                                icon: Icon(Icons.remove_red_eye),
+                                onPressed: () {
+                                  setState(() {
+                                    _passwordVisible2 = !(_passwordVisible2);
+                                  });
+                                }),
                           ),
                         ),
                       ),
@@ -351,8 +360,8 @@ class _SignInPageState extends State<SignInPage> {
                                       builder: (context) => new Login()),
                                 ),
                           style: TextStyle(
-                              decoration: TextDecoration.underline,
-                              fontSize: 25.0),
+                            decoration: TextDecoration.underline,
+                          ),
                         )
                       ],
                     ),

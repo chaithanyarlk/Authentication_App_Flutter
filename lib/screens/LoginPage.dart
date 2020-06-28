@@ -39,6 +39,11 @@ class _LoginPageState extends State<LoginPage> {
 
   final email = TextEditingController();
   final password = TextEditingController();
+  void dispose() {
+    email.dispose();
+    password.dispose();
+    super.dispose();
+  }
 
   // Build method runs again and again as the state changes to rebuild the UI
   @override
@@ -147,16 +152,16 @@ class _LoginPageState extends State<LoginPage> {
                             controller: password,
                             obscureText: _passwordVisible,
                             decoration: InputDecoration(
-                                prefixIcon: Icon(Icons.lock),
-                                labelText: 'Password',
-                                suffixIcon: new IconButton(
-                                    icon: Icon(Icons.remove_red_eye),
-                                    onPressed: () {
-                                      setState(() {
-                                        _passwordVisible = !(_passwordVisible);
-                                      });
-                                    }),
-                                    ),
+                              prefixIcon: Icon(Icons.lock),
+                              labelText: 'Password',
+                              suffixIcon: new IconButton(
+                                  icon: Icon(Icons.remove_red_eye),
+                                  onPressed: () {
+                                    setState(() {
+                                      _passwordVisible = !(_passwordVisible);
+                                    });
+                                  }),
+                            ),
                           ),
                         ),
                         Container(
@@ -354,8 +359,8 @@ class _LoginPageState extends State<LoginPage> {
                                       builder: (context) => new SignIn()),
                                 ),
                           style: TextStyle(
-                              decoration: TextDecoration.underline,
-                              fontSize: 25.0),
+                            decoration: TextDecoration.underline,
+                          ),
                         )
                       ],
                     ),

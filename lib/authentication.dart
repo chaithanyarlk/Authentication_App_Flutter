@@ -47,6 +47,9 @@ class Authenticate {
     FirebaseAuth.instance.signInWithCredential(authCreds);
     return HomeScreen();
   }
+  Future<void> sendPasswordResetEmail(String email) async {
+    return _auth.sendPasswordResetEmail(email: email);
+  }
 
  signInOtp(smscode, verId) {
     AuthCredential authCreds = PhoneAuthProvider.getCredential(

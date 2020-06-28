@@ -300,7 +300,7 @@ class _OTPLoginPageState extends State<OTPLoginPage> {
       ),
     );
   }
-
+  
   Future<void> verifyPhone(phoneNo) async {
     final PhoneVerificationCompleted verified = (AuthCredential authresult) {
       Authenticate().signIn(authresult);
@@ -319,7 +319,7 @@ class _OTPLoginPageState extends State<OTPLoginPage> {
       this.verificationId = verId;
     };
     await FirebaseAuth.instance.verifyPhoneNumber(
-        phoneNumber: phoneNo,
+        phoneNumber: "+91"+phoneNo,
         timeout: const Duration(seconds: 5),
         verificationCompleted: verified,
         verificationFailed: verificationfailed,
